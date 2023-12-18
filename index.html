@@ -14,13 +14,15 @@ window.location.reload();
 FullVolume();
 document.querySelector("#volume").innerHTML = x.volume;
 }
-function embed(url){
+  function execute(html){
     var win = window.open();
     win.document.write('<iframe src=' + JSON.stringify(url) + ' style="border:hidden;overflow:hidden;position:absolute;top:0;left:0%;bottom:0%;right:0%;width:100%;height:100%;"></iframe>');
+  }
+function embed(url){
+    execute('<iframe src=' + JSON.stringify(url) + ' style="border:hidden;overflow:hidden;position:absolute;top:0;left:0%;bottom:0%;right:0%;width:100%;height:100%;"></iframe>');
 }
-  
 function emulate(swf){
-    embed("emulator.html#" + btoa("shockwaveflash/" + swf));
+    execute(atob('PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KPC9oZWFkPgo8Ym9keT4KCTxzY3JpcHQgc3JjPSJlbXVsYXRvci5qcyI+PC9zY3JpcHQ+CjxlbWJlZCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBxdWFsaXR5PWhpZ2ggZnVsbHNjcmVlbj10cnVlIHN0eWxlPSJkaXNwbGF5OiBub25lOyIgc3JjPSI=') + swf + atob('Ij4KICA8c2NyaXB0PgogICAgdHJ5ewogICAgICB2YXIgc3RhdHVzOwogICAgICB2YXIgeGh0dHAgPSBuZXcgWE1MSHR0cFJlcXVlc3QoKTsKICB4aHR0cC5vbnJlYWR5c3RhdGVjaGFuZ2UgPSBmdW5jdGlvbigpIHsKICAgIGlmICh0aGlzLnJlYWR5U3RhdGUgPT0gNCkgewogICAgICBzdGF0dXMgPSB0aGlzLnN0YXR1czsKICAgICAgaWYoc3RhdHVzID09IDIwMCl7CiAgICBkb2N1bWVudC5ib2R5LnN0eWxlLm1hcmdpbiA9ICIwIjsKICAgIGRvY3VtZW50LmJvZHkuc3R5bGUuaGVpZ2h0ID0gIjEwMHZoIjsKICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImVtYmVkIikuc3R5bGUuZGlzcGxheSA9ICdibG9jayc7CiAgICAgIH0gZWxzZSBpZihzdGF0dXMgPT0gNDA0KXsKICAgICAgICBhbGVydCgiRXJyb3IgIiArIHN0YXR1cyArICIuIFNvcnJ5LCBidXQgdGhlIGdhbWUgY2FuJ3QgYmUgZm91bmQhIFBsZWFzZSBjb250YWN0IHRoZSBvd25lci4iKTsKICAgICAgfSBlbHNlIHsKICAgICAgICBhbGVydCgiRXJyb3IgIiArIHN0YXR1cyArICIuIFNvcnJ5LCBidXQgdGhlcmUgc2VlbXMgdG8gYmUgYW4gZXJyb3IhIFRyeSByZWxvYWRpbmcsIGNsZWFyaW5nIHlvdXIgY2FjaGUsIGNvbm5lY3RpbmcgdG8gYSB2cG4sIG9yIGNvbnRhY3RpbmcgdGhlIG93bmVyISIpOwogICAgICB9CiAgICB9CiAgfTsKICB4aHR0cC5vcGVuKCJHRVQiLCBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJlbWJlZCIpLnNyYywgdHJ1ZSk7CiAgeGh0dHAuc2VuZCgpOwogICAgfSBjYXRjaChlKXsKICAgICAgYWxlcnQoIlNvcnJ5LCBidXQgYW4gZXJyb3IgaGFzIGJlZW4gZm91bmQgaW4gdGhlIGNvZGUuIFJlbG9hZCBvciBjb250YWN0IHRoZSBvd25lciEgRXJyb3I6ICIgKyBlLm1lc3NhZ2UpOwogICAgfQogIDwvc2NyaXB0Pgo8L2JvZHk+CjwvaHRtbD4='));
 }  
 function noHistory(){
     localStorage.setItem("history", "none");
