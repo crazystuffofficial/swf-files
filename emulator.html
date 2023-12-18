@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>W TANGERINE CATS</title>
+</head>
+<body>
+	<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <center><embed width="100%" height="100%" quality=high fullscreen=true style="display: none;"></center>
+  <script>
+    try{
+      var status;
+      var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4) {
+      status = this.status;
+      if(status == 200){
+    document.body.style.margin = "0";
+    document.body.style.height = "100vh";
+    document.querySelector("embed").src = atob(location.hash.slice(1));
+    document.querySelector("embed").style.display = 'block';
+      } else if(status == 404){
+        alert("Error " + status + ". Sorry, but the game can't be found! Please contact the owner.");
+      } else {
+        alert("Error " + status + ". Sorry, but there seems to be an error! Try reloading, clearing your cache, connecting to a vpn, or contacting the owner!");
+      }
+    }
+  };
+  xhttp.open("GET", atob(location.hash.slice(1)), true);
+  xhttp.send();
+    } catch(e){
+      alert("Sorry, but an error has been found in the code. Reload or contact the owner! Error: " + e.message);
+    }
+  </script>
+</body>
+</html>
