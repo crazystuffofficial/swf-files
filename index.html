@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html style="font-size:0.83127vw;" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <script>
+ var x = document.querySelector("audio");
+
+function FullVolume() {
+  x.volume = 1.0;
+  document.querySelector("#volume").innerHTML = x.volume;
+} 
+
+function TurnOn() {
+window.location.reload();
+FullVolume();
+document.querySelector("#volume").innerHTML = x.volume;
+}
+function embed(url){
+    var win = window.open();
+    win.document.write('<iframe src=' + JSON.stringify(url) + ' style="border:hidden;overflow:hidden;position:absolute;top:0;left:0%;bottom:0%;right:0%;width:100%;height:100%;"></iframe>');
+}
+  
+function emulate(swf){
+    embed("emulator.html#" + btoa("shockwaveflash/" + swf));
+}  
+function noHistory(){
+    localStorage.setItem("history", "none");
+ window.location.reload();
+}
+
+ if(localStorage.getItem("history") == "none"){
+     if(window.self == window.top){
+         embed(location.href);
+         location.href="https://google.com";
+     }
+ }
+ function makeTextBigger(){
+var getsize1 = document.getElementById("sizesection1").style.fontSize;
+var getsize2 = document.getElementById("sizesection2").style.fontSize;
+var getsize3 = document.getElementById("sizesection3").style.fontSize;
+var getsize4 = document.getElementById("sizesection4").style.fontSize;
+var getsize5 = document.getElementById("sizesection5").style.fontSize;
+var getsize6 = document.getElementById("sizesection6").style.fontSize;
+
+var size1 = getsize1.replace("vw","");
+var size2 = getsize2.replace("vw","");
+var size3 = getsize3.replace("vw","");
+var size4 = getsize4.replace("vw","");
+var size5 = getsize5.replace("vw","");
+var size6 = getsize6.replace("vw","");
+
+size1 = size1 - -0.10080645161290322;
+size2 = size2 - -0.10080645161290322;
+size3 = size3 - -0.10080645161290322;
+size4 = size4 - -0.10080645161290322;
+size5 = size5 - -0.10080645161290322;
+size6 = size6 - -0.10080645161290322;
+
+document.getElementById("sizesection1").style.fontSize = size1 + "vw";
+document.getElementById("sizesection2").style.fontSize = size2 + "vw";
+document.getElementById("sizesection3").style.fontSize = size3 + "vw";
+document.getElementById("sizesection4").style.fontSize = size4 + "vw";
+document.getElementById("sizesection5").style.fontSize = size5 + "vw";
+document.getElementById("sizesection6").style.fontSize = size6 + "vw";
+
+}
+function makeTextSmaller(){
+var getsize1 = document.getElementById("sizesection1").style.fontSize;
+var getsize2 = document.getElementById("sizesection2").style.fontSize;
+var getsize3 = document.getElementById("sizesection3").style.fontSize;
+var getsize4 = document.getElementById("sizesection4").style.fontSize;
+var getsize5 = document.getElementById("sizesection5").style.fontSize;
+var getsize6 = document.getElementById("sizesection6").style.fontSize;
+
+var size1 = getsize1.replace("vw","");
+var size2 = getsize2.replace("vw","");
+var size3 = getsize3.replace("vw","");
+var size4 = getsize4.replace("vw","");
+var size5 = getsize5.replace("vw","");
+var size6 = getsize6.replace("vw","");
+
+size1 = size1 - 0.10080645161290322;
+size2 = size2 - 0.10080645161290322;
+size3 = size3 - 0.10080645161290322;
+size4 = size4 - 0.10080645161290322;
+size5 = size5 - 0.10080645161290322;
+size6 = size6 - 0.10080645161290322;
+
+document.getElementById("sizesection1").style.fontSize = size1 + "vw";
+document.getElementById("sizesection2").style.fontSize = size2 + "vw";
+document.getElementById("sizesection3").style.fontSize = size3 + "vw";
+document.getElementById("sizesection4").style.fontSize = size4 + "vw";
+document.getElementById("sizesection5").style.fontSize = size5 + "vw";
+document.getElementById("sizesection6").style.fontSize = size6 + "vw";
+
+}
+function setSize(){
+var getsize1 = document.getElementById("sizesection1").style.fontSize;
+var getsize2 = document.getElementById("sizesection2").style.fontSize;
+var getsize3 = document.getElementById("sizesection3").style.fontSize;
+var getsize4 = document.getElementById("sizesection4").style.fontSize;
+var getsize5 = document.getElementById("sizesection5").style.fontSize;
+var getsize6 = document.getElementById("sizesection6").style.fontSize;
+
+var setSize = document.getElementById("sizeInput").value;
+
+var size1 = getsize1.replace("vw","");
+var size2 = getsize2.replace("vw","");
+var size3 = getsize3.replace("vw","");
+var size4 = getsize4.replace("vw","");
+var size5 = getsize5.replace("vw","");
+var size6 = getsize6.replace("vw","");
+
+size1 = setSize;
+size2 = setSize;
+size3 = setSize;
+size4 = setSize;
+size5 = setSize;
+size6 = setSize;
+
+document.getElementById("sizesection1").style.fontSize = size1 + "vw";
+document.getElementById("sizesection2").style.fontSize = size2 + "vw";
+document.getElementById("sizesection3").style.fontSize = size3 + "vw";
+document.getElementById("sizesection4").style.fontSize = size4 + "vw";
+document.getElementById("sizesection5").style.fontSize = size5 + "vw";
+document.getElementById("sizesection6").style.fontSize = size6 + "vw";
+
+}
+
+ </script>
+ <title>Crazy stuff</title>
+ <style>
+ h1{color: rgb(102, 0, 0);}
+ h2{color: rgb(102, 41, 0);}
+ h3{color: rgb(5, 102, 0);}
+ h4{color: rgb(0, 41, 102);}
+ h5{color: rgb(65, 0, 102);}
+ 
+ body{background: linear-gradient(rgb(255, 115, 115), rgb(255, 200, 117), rgb(163, 255, 117), rgb(117, 145, 255), rgb(221, 117, 255), rgb(117, 117, 255), rgb(117, 255, 122), rgb(255, 193, 117), rgb(255, 115, 115));}
+body {font-family:arial ;
+     }
+ </style>
+ <style>
+.button {
+  border: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 4px 2px;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+.button1 {
+  color: blue; 
+}
+
+
+.button2 {
+  color: blue; 
+}
+
+.button1:hover {
+  color: darkgreen;
+}
+.button2:hover {
+  color: darkgreen;
+}
+
+
+</style>
+
+
+ </head>
+ <body>
+     <label>Click this to hide history</label>
+     <input onclick="noHistory()" type="radio">
+<audio autoplay="" loop="" src="song.mp3" hidden=""></audio>
+<div style="font-size:0.83127vw;" id="sizesection1">
+<h1><p style="font-family:arial">Hello! You have arived at the SWF files page of the crazy stuff website. Browse around on our programs!</p>
+</h1>
+<h3>Table of Contents:
+</h3><h4 style="color:rgb(138, 55, 0)">
+    <ol style="color:darkblue">
+    <li><a href="#games">Games </a></li>
+    <li><a href="#Crazystuff">Crazy stuff related</a></li>
+    <li><a href="#random">Random stuff</a></li>
+    </ol></h4></div>
+   <h4 style="color:rgb(138, 55, 0)"> 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+    
+</h4>
+<div style="font-size:0.83127vw;" id="sizesection2">
+<h4 style="color:rgb(0, 73, 176)"><p style="font-family:arial">So far, this many people have visited my webpage:</p></h4>
+
+<img src="https://hitwebcounter.com/counter/counter.php?page=7850403&amp;style=0014&amp;nbdigits=15&amp;type=page&amp;initCount=0" border="0">
+
+<h4 style="color:rgb(115, 70, 2);"><a target="_blank" href="#directions">Click to view</a><br></h4></div>
+<h4 style="color:rgb(115, 70, 2);">_____________________________________________________________________________________________________________________________________________________________________________________________________________________</h4>
+
+
+<div style="font-size:0.83127vw;" id="sizesection3">
+<h2 id="games">Games:</h2>
+<h4><p style="font-family:arial">
+ <a href="javascript:void(0)" onclick="embed('uv.html')" class="button button1">Click me and go to the url you want in this custom browser! (Still fixing)</a> <br>
+</p></h4></div>  <br>
+
+<br><h4 style="color:rgb(138, 55, 0)">_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+ </h4>
+<div style="font-size:0.83127vw;" id="sizesection4">
+<h2 id="Crazystuff">Crazy stuff related:</h2>
+
+<a href="https://drive.google.com/uc?export=download&amp;id=1SwDVFuaWWFDLrfiEaE5e2y1JSNZWeuZ1" class="button button1" target="_blank">Click this to download the free app! (right-click and open in new tab + no adds except for in games)</a>
+
+<h4>Click the subscribe button bellow to subscribe to my channel!</h4>
+
+<iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 103px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" id="I11_1632681252479" name="I11_1632681252479" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCY-8pPu48scTorUiUrh3vkQ&amp;layout=default&amp;count=default&amp;origin=https%3A%2F%2Fdevelopers-dot-devsite-v2-prod.appspot.com&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.uAzDleg2hnU.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCMT6b3QcRI88QolvkcdUjC8YnoTvA%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I11_1632681252479&amp;_gfid=I11_1632681252479&amp;parent=https%3A%2F%2Fdevelopers-dot-devsite-v2-prod.appspot.com&amp;pfname=&amp;rpctoken=40820607" data-gapiattached="true" width="100%" frameborder="0"></iframe>
+
+<br>
+
+
+<a class="button button1" href="https://www.youtube.com/channel/UCY-8pPu48scTorUiUrh3vkQ">Click this button to copy the link to go to my youtube channel!</a>
+
+
+<h3>It would really help to subscribe, so that there can be a custom url
+ for the channel. Then more people can play my games! You don't have to 
+though. Thank you!</h3>
+<a target="_blank" href="mailto:crazystuff.xyz@gmail.com?subject=Question&amp;body=Hello!%20I%20have%20a%20simple%20question%20for%20you.%20(put%20question%20here)%0A%0AThank%20you!%0A%0A">If
+ there are any issues, or you have any suggestions, gmail me by clicking
+ this link and put the adress "crazystuff.xyz@gmail.com".</a>
+
+<p style="font-family:arial"><a target="_blank" href="https://photos.google.com/photo/AF1QipOswB0rftLDz8_IzVJO4mRUKhSgSRCMrPslxq7y">Click on the link to see the logo I made!</a></p><br></div><h4 style="color:rgb(138, 55, 0)">_____________________________________________________________________________________________________________________________________________________________________________________________________________________</h4>
+
+<div style="font-size:0.83127vw;" id="sizesection5">
+<h2 id="random">And last but not least, RANDOM STUFF!!!:</h2>
+
+<a target="_blank" href="https://www.youtube.com/embed/hGqGITyjJXI?autoplay=1"><button type="button" onclick="setTimeout(function(){alert('Hahaha get stick rolled')}, 1000);"><p>Click The button</p></button></a>
+
+<h4><p style="font-family:arial"><a target="_blank" href="javascript:void(0)">What will happen if we click this link? ABSOLUTELY NOTHING</a></p></h4>
+
+<h4><p style="font-family:arial"><a target="_blank" href="https://www.youtube.com/watch?v=H_dNnpNe97c">CLICK PLEASE</a></p></h4>
+
+<h4><p style="font-family:arial"><a target="_blank" href="https://www.youtube.com/watch?v=ZZ5LpwO-An4">CLICK FOR $100 DOCUMENT!!!</a></p></h4>
+
+<h4><p style="font-family:arial; color:rgb(115, 70, 2);"><a target="_blank" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">CLICK THIS LINK AND THEN IT WILL REDIRECT YOU TO YOUTUBE VIDEO TO GET A MILLION VBUCKS AND ROBUX PROMO CODES SO YOU CAN TYPE /E FREE!!!</a></p></h4></div><h4 style="color:rgb(115, 70, 2);">_____________________________________________________________________________________________________________________________________________________________________________________________________________________</h4>
+<div style="font-size:0.83127vw;" id="sizesection6">
+<h3><p style="font-family:arial">I would like to say thank you to khan 
+academy for teaching me these skills and to word/microsoft because I 
+made the logo using word. I would also like to say thank you to snip 
+&amp; sketch because I made the logo by taking a screenshot. I would 
+even like to say thank you to google because google technically made the
+ link to the logo. I would finally like to say thank you to <strong>YOU</strong>. <strong>YOU</strong> played with these programs and <strong>YOU</strong>
+ probably liked them and I am happy that you liked them. It fills my 
+heart with joy and it makes me feel like this webpage is worth it. And 
+by the way, thank you for that many visits (above). :-)</p></h3>
+
+<h5><p style="font-family:arial">
+
+
+</p></h5><h4><p style="font-family:arial">The owner hopes you have a fantastic 
+day.</p></h4>
+</div>
+<h4 style="color:rgb(115, 70, 2);">_____________________________________________________________________________________________________________________________________________________________________________________________________________________</h4>
+<center>
+<a href="javascript:void(0);" onclick="makeTextBigger();" class="button button1">Click this to make the webpage text bigger!</a>
+<a href="javascript:void(0);" onclick="makeTextSmaller();" class="button button1">Click this to make the webpage text smaller!</a>
+<input id="sizeInput">
+<a href="javascript:void(0);" onclick="setSize();" class="button button1">Click this to make the webpage font size the number you have inputed!</a>
+<br>
+<p><em>Note: the default size is 0.83127. If you want to reset the font,
+ then put the number 0.83127 in the input box and then click on the text
+ that makes the text what number you put in the input box.</em></p>
+</center>
+<script>
+    var body = document.body.innerHTML;
+     if(localStorage.getItem("history") == "none"){
+         document.querySelector("input").onclick = function(){
+         localStorage.setItem("history", "shown");
+          window.top.location = window.self.location;
+     };
+     document.querySelector("label").innerHTML = "Click this to show history";
+     }
+    </script>
+</body></html>
